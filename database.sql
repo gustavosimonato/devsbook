@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 18-Jun-2021 às 17:32
+-- Tempo de geração: 18-Jun-2021 às 17:59
 -- Versão do servidor: 10.4.11-MariaDB
 -- versão do PHP: 7.4.4
 
@@ -68,7 +68,8 @@ CREATE TABLE `posts` (
 
 INSERT INTO `posts` (`id`, `id_user`, `type`, `created_at`, `body`) VALUES
 (1, 1, 'text', '2021-06-18 20:30:02', 'made in black river'),
-(2, 1, 'text', '2021-06-18 20:30:38', '2º teste de um post');
+(2, 1, 'text', '2021-06-18 20:30:38', '2º teste de um post'),
+(3, 1, 'photo', '2021-06-18 20:58:11', '144f579459f6b19fb7e1604cbbb61e1f.jpg');
 
 -- --------------------------------------------------------
 
@@ -106,7 +107,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `email`, `password`, `name`, `birthdate`, `city`, `work`, `avatar`, `cover`, `token`) VALUES
-(1, 'gustavosimonato@email.com', '$2y$10$44/SiZkh1O24McXe6d6kxuvnGn8opZKWFBGsnhMxOO3Hrfwgjggki', 'gustavo simonato', '2014-02-10', NULL, NULL, 'default.jpg', 'cover.jpg', '101eeced999f629536e74f8e6e6a45f8');
+(1, 'gustavosimonato@email.com', '$2y$10$44/SiZkh1O24McXe6d6kxuvnGn8opZKWFBGsnhMxOO3Hrfwgjggki', 'gustavo simonato', '2014-02-10', '', '', '8dc0649cf58eef2cca00484251bc60d4.jpg', '9e60b3a30aed1b94eee37244375a7328.jpg', '101eeced999f629536e74f8e6e6a45f8');
 
 --
 -- Índices para tabelas despejadas
@@ -162,7 +163,7 @@ ALTER TABLE `postlikes`
 -- AUTO_INCREMENT de tabela `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de tabela `userrelations`
